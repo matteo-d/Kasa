@@ -1,4 +1,3 @@
-import { Routes } from "react-router-dom"
 
 export function Home() {
   return(
