@@ -18,6 +18,7 @@ root.render(
         <Route exact path="/" element={<Home />} />
         <Route exact path="/lodging/:id" element={<Lodging />} />
         <Route exact path="/about" element={<About />} />
+        <Route path ="/error" element={<Error />} />
         <Route path ="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
