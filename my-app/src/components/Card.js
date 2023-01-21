@@ -1,6 +1,7 @@
 import jsonData from "../data.json"
+import PropTypes from "prop-types"
 
-export default function Card(){ 
+export default function Card({id, title, cover}){ 
   return(
     <section>
       <ul>
@@ -13,4 +14,10 @@ export default function Card(){
       </ul>
     </section>
   )
+}
+
+Card.propTypes = {
+  id : PropTypes.string.isRequired,  
+  title : PropTypes.number.isRequired,  
+  cover : PropTypes.string.isRequired  
 }
