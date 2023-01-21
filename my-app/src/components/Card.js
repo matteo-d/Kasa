@@ -1,23 +1,35 @@
 import jsonData from "../data.json"
-import PropTypes from "prop-types"
+import styled from "styled-components"
 
-export default function Card({id, title, cover}){ 
+const Section = styled.section`
+ position: absolute;
+    width: 100%;
+   
+    
+    top: 30rem;
+    background-color: red;
+} 
+`
+const Ul = styled.ul`
+  
+
+`
+const Li = styled.li`
+
+`
+const Title = styled.h3`
+
+`
+export default function Card(){ 
   return(
-    <section>
-      <ul>
+    <Section>
+      <Ul>
         {jsonData.map(lodgement => (
-          <li key={lodgement.id}>
-            {lodgement.title}
-            {lodgement.cover}
-          </li>
+          <Li key={lodgement.id}>
+            <Title>{lodgement.title}</Title>
+          </Li>
         ))}
-      </ul>
-    </section>
+      </Ul>
+    </Section>
   )
-}
-
-Card.propTypes = {
-  id : PropTypes.string.isRequired,  
-  title : PropTypes.number.isRequired,  
-  cover : PropTypes.string.isRequired  
 }
