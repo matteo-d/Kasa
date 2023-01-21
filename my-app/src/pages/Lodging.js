@@ -4,7 +4,7 @@ import jsonData from "../data.json"
 export function Lodging() {
   const { id } = useParams()
   const Data = jsonData.filter(prop => prop.id === id)
-  if (Data.length ==+ 1) {
+  if (Data.length === 1) {
     return(
       <div>
         <h1> URL PARAMS :  { id } </h1>
