@@ -7,8 +7,8 @@ export default function Header(){
     <HeaderStyled>
       <Img  src={ Svg } alt="Logo de Kasa"/>
       <Nav>
-        <Home to="/"> Home </Home>
-      <About to="/about"> About </About>
+        <Home to="/"> Acceuil </Home>
+      <About to="/about"> A Propos </About>
       </Nav>
     </HeaderStyled>
   )
