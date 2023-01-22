@@ -3,9 +3,10 @@ import { Link } from "react-router-dom"
 
 const StyledHeader = styled.header`  
   display : flex;
-  flex-direction : row;
+  width : 85%;
   justify-content : space-between;
-  padding : 2rem 3rem 2rem 3rem
+  margin : auto;
+  padding : 2rem 0 3rem 0;
 `
 const Img = styled.img`
 `
