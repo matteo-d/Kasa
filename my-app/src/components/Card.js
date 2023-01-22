@@ -1,15 +1,16 @@
 import jsonData from "../data.json"
-  
+import { Section, Ul, Lodgement, Title} from "../styles/Card"
+
 export default function Card(){ 
   return(
-    <section>
-      <ul>
+    <Section>
+      <Ul>
         {jsonData.map(lodgement => (
-          <li key={lodgement.id}>
-            <title>{lodgement.title}</title>
-          </li>
+          <Lodgement  key={ lodgement.id } to={`/lodging/${lodgement.id}`} cover={lodgement.cover}>
+            <Title>{ lodgement.title } </Title>
+          </Lodgement>
         ))}
-      </ul>
-    </section>
+      </Ul>
+    </Section>
   )
 }

@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import { Section, Title } from "../styles/Banner"
 
 export default function Banner(){
   return(
-    <section>
-      <title>Chez vous, partout et ailleurs</title>
-    </section>
+    <Section>
+      <Title>Chez vous, partout et ailleurs</Title>
+    </Section>
   )
 }
