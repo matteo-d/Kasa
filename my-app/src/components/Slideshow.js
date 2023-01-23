@@ -14,12 +14,27 @@ function getLodgementImages(data) {
   return Images
 }
 
-function Previous() {
-  console.log('previous')
+function Previous(img, idx, setIdx) {
+  console.log("Entry previous : ", idx)
+  let len = img.length
+  if (idx === 0) {
+     setIdx( idx = len - 1)
+    console.log("Exit previous : ", idx)
+    return 
+  }
+   setIdx(idx - 1)
+  console.log("Exit previous : ", idx)
 }
-
-function Next() {
-  console.log('next')
+function Next(img, idx, setIdx) {
+  console.log("Entry previous : ", idx)
+  let len = img.length
+  if (idx === len - 1) {
+     setIdx( idx = 0)
+    console.log("Exit previous : ", idx)
+    return 
+  }
+   setIdx(idx + 1)
+  console.log("Exit previous : ", idx)
 }
 export default function Slideshow() {
   const { id } = useParams()
@@ -30,8 +45,8 @@ export default function Slideshow() {
     if (Data.length === 1) {
     return(
       <Section>
-        <ArrowLeft onClick={Previous} src = {Arrow1}/>
-        <ArrowRight onClick={Next} src = {Arrow2}/>
+      <ArrowLeft onClick={() => Previous(Images,index,setIndex)} src={Arrow1} />
+        <ArrowRight onClick={() => Next(Images,index,setIndex)} src = {Arrow2}/>
       </Section>
       )
     }
