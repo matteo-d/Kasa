@@ -45,6 +45,6 @@ font-style: normal;
 font-weight: 500;
 font-size: 24px;
 color : #FF6060;
-display : none;
+display : ${props => props.display};
 `
 export { Section, Article, Div, Title, Arrow, Text }
