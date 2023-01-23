@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import ArrowDown from "../assets/arrowDown.svg"
 
 const Section = styled.section `
 width : 74%;
@@ -12,7 +11,7 @@ flex-direction : column;
 margin-top : 2rem;
 
 `
-const Div = styled.article `
+const Div = styled.div `
 display : flex;
 flex-direction : row;
 justify-content : space-between;
@@ -30,14 +29,14 @@ color : #FFFFFF;
  align-self : center;
 `
 const Arrow = styled.span `
- background-image : url(${ArrowDown});
+ background-image : url(${props => props.bgImage});
  background-repeat : no-repeat;
  align-self : center;
  height : 1.8rem;
  width : 1.8rem;
  padding-right : 1.2rem
 `
-const Text = styled.span `
+const Text = styled.p `
 background: #F7F7F7;
 border-radius: 5px;
 padding : 1rem 1.8rem 1rem 0.8rem;
@@ -46,5 +45,6 @@ font-style: normal;
 font-weight: 500;
 font-size: 24px;
 color : #FF6060;
+display : none;
 `
 export { Section, Article, Div, Title, Arrow, Text }
