@@ -22,7 +22,7 @@ export default function Collapse() {
               <Title>{article.title}</Title>
               <Arrow bgImage={isExpanded ? ArrowUp : ArrowDown} onClick={() => toggleArrow(article.id)}> </Arrow>
             </Div>
-            <Text display={isExpanded ? "" : "none"}>{article.text}</Text>
+            <Text display={isExpanded ? "block" : "none"}>{article.text}</Text>
           </Article>
         );
       })}
