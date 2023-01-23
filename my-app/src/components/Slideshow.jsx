@@ -5,7 +5,6 @@ import { Section, ArrowLeft, ArrowRight } from "../styles/Slideshow"
 import Arrow1 from "../assets/arrowLeft.svg"
 import Arrow2 from "../assets/arrowRight.svg"
 
-
 function getLodgementImages(data) {
   let Images = []
   for (let image of data[0].pictures){
@@ -13,6 +12,7 @@ function getLodgementImages(data) {
   }
   return Images
 }
+
 
 function Previous(img, idx, setIdx) {
   console.log("Entry previous : ", idx)
