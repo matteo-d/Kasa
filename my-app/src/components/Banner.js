@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import { Section, Title } from "../styles/Banner"
 
 export default function Banner(){
