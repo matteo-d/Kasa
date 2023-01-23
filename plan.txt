@@ -34,7 +34,7 @@ Ressources :
 informations toujours actualisées sur comment initialiser votre application.
 
 
-Étape 2 : Ajoutez React Router [ ]
+Étape 2 : Ajoutez React Router [x]
 10 % de progression
 Avant de démarrer cette étape, je dois avoir :
 ● Initialisé mon application.
@@ -61,21 +61,16 @@ Recommandations :
 ● Lorsque vous créez la logique de routage, profitez-en pour créer les
 différentes pages de l’application. Posez-vous la question : Que se
 passe-t-il si j’écris mal l’URL d’une route ou si j’entre une route qui
-n’existe pas ? [ ]
+n’existe pas ? [x]
 ● Pour la navigation dans l’application, vous pourrez soit faire un header et
 un footer, soit faire un layout dans lequel vous mettrez le reste de
 l’application via props.children. Pensez à créer ces composants et à y
-intégrer le composant du router. [ ]
+intégrer le composant du router. [x]
 ● C’est le moment de commencer à faire la mise en page de votre
 application pour le layout principal. Vous avez pour cela différentes
-options (CSS, SASS, modules CSS). [ ]
+options (CSS, SASS, modules CSS). [x]
 Points de vigilance :
-Créer un composant à part pour le routeur. [ ]
-Ressources :
-● Recommandations de CRA pour l’utilisation du CSS :
-○ Ajout de feuilles de style [ ]
-○ Ajout de modules CSS (recommandé par CRA) [ ]
-○ Ajout de SASS [ ]
+Créer un composant à part pour le routeur. []
 
 
 Étape 4 : Créez la page d’accueil [ ]

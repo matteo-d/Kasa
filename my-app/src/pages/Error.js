@@ -1,8 +1,7 @@
+import Error from "../components/Error"
 
-export function Error() {
+export function Err() {
   return(
-    <div>
-      <h1>Error 404 </h1>
-    </div>
+    <Error />
   )
 }
