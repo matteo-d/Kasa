@@ -1,9 +1,9 @@
-import JsonData from "../data.json"
 import { useParams } from "react-router-dom"
 import { Div, DivDos, DivTres, LodgementInfos , Title, Location, ListTags, TagElement, Infos, Stars, WrapperStars, LandlordName, LandlordPicture } from "../styles/LodgementDescription"
 
 import FilledStar from "../assets/FilledStar.svg"
 import EmptyStar from "../assets/EmptyStar.svg"
+import JsonData from "../data.json"
 
 function displayStars (numberOfStars){
   let Array = []
@@ -11,19 +11,20 @@ function displayStars (numberOfStars){
   let maxStars = 5;
   while (i < numberOfStars){
     Array.push(FilledStar)
+    i++
   }
   while (i < maxStars){
     Array.push(EmptyStar)
+    i++
   }
-  console.log(Array)
+  return Array
 }
 export default function LodgementDescription(){
   const { id } = useParams()
   const Data = JsonData.filter(prop => prop.id === id)
-  displayStars(Data[0].rating)
+  const stars = displayStars(Data[0].rating)
   return(
     <LodgementInfos>
-
       <Div>
         <Title> {Data[0].title} </Title>
         <Location> {Data[0].location}</Location>
@@ -32,14 +33,14 @@ export default function LodgementDescription(){
             <TagElement key={index}>{tag}</TagElement>
           ))}
         </ListTags>
-      </Div> 
+      </Div>
       <DivDos>
           <Infos>
             <LandlordName>{Data[0].host.name}</LandlordName>
-            <LandlordPicture src={Data[0].host.picture}/>  
+            <LandlordPicture src={Data[0].host.picture}/>
           </Infos>
           <WrapperStars>
-            {displayStars.map((star, index) =>(
+            {stars.map((star, index) =>(
             <Stars key={index} src={star} Stars/>
             ))}
           </WrapperStars>
@@ -50,4 +51,4 @@ export default function LodgementDescription(){
       </DivTres>
     </LodgementInfos>
   )
-} 
+}
