@@ -8,26 +8,27 @@ export default function LodgementDescription(){
 
   return(
     <LodgementInfos>
-    <Div>
-      <Title> {Data[0].title} </Title>
-      <Location> {Data[0].location}</Location>
-      <ListTags>
-        {Data[0].tags.map(tag => (
-          <TagElement>{tag}</TagElement>
-        ))}
-      </ListTags>
-    </Div>
-    <DivDos>
-      <Stars>{Data[0].rating}</Stars>
-      <LandlordInfos>
-        <LandlordName>{Data[0].host.name}</LandlordName>
-        <LandlordPicture src={Data[0].host.picture}/>
-      </LandlordInfos>
-    </DivDos>
-    <DivTres>
-    <p>desc</p>
-    <p>equip</p>
-    </DivTres>
+
+      <Div>
+        <Title> {Data[0].title} </Title>
+        <Location> {Data[0].location}</Location>
+        <ListTags>
+          {Data[0].tags.map((tag, index) => (
+            <TagElement key={index}>{tag}</TagElement>
+          ))}
+        </ListTags>
+      </Div> 
+      <DivDos>
+        <Stars>{Data[0].rating}</Stars>
+        <LandlordInfos>
+          <LandlordName>{Data[0].host.name}</LandlordName>
+          <LandlordPicture src={Data[0].host.picture}/>
+        </LandlordInfos>
+      </DivDos>
+      <DivTres>
+        <p>desc</p>
+        <p>equip</p>
+      </DivTres>
     </LodgementInfos>
   )
 } 
