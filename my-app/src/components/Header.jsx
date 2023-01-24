@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { StyledHeader, Img, Nav, Home, About } from "../styles/Header"
 import Svg from "../assets/logo.svg"
 

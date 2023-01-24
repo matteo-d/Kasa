@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import { BannerAbout } from "../styles/BannerAbout"
 import Img from "../assets/banner.png"
 

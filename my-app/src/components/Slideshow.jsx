@@ -13,7 +13,6 @@ function getLodgementImages(data) {
   return Images
 }
 
-
 function Previous(img, idx, setIdx) {
   console.log("Entry previous : ", idx)
   let len = img.length
