@@ -1,5 +1,14 @@
 import styled from "styled-components"
 
+const Div = styled.div`
+		
+`
+const DivDos = styled.div`
+		
+`
+const DivTres = styled.div`
+		
+`
 const LodgementInfos = styled.section`
 		
 `
@@ -27,4 +36,4 @@ const LandlordName = styled.p`
 const LandlordPicture = styled.img`
 	
 `
-export { LodgementInfos, Title, Location, ListTags, TagElement, Stars, LandlordInfos, LandlordName, LandlordPicture }
+export { Div, DivDos, DivTres, LodgementInfos, Title, Location, ListTags, TagElement, Stars, LandlordInfos, LandlordName, LandlordPicture }

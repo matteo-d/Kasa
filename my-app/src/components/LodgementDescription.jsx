@@ -1,29 +1,33 @@
 import JsonData from "../data.json"
 import { useParams } from "react-router-dom"
-import { LodgementInfos , Title, Location, ListTags, TagElement, Stars, LandlordInfos, LandlordName, LandlordPicture } from "../styles/LodgementDescription"
+import { Div, DivDos, DivTres, LodgementInfos , Title, Location, ListTags, TagElement, Stars, LandlordInfos, LandlordName, LandlordPicture } from "../styles/LodgementDescription"
 
 export default function LodgementDescription(){
   const { id } = useParams()
   const Data = JsonData.filter(prop => prop.id === id)
-  console.log(Data[0])
-  console.log(Data[0].host.picture)
-  
 
   return(
     <LodgementInfos>
+    <Div>
       <Title> {Data[0].title} </Title>
       <Location> {Data[0].location}</Location>
       <ListTags>
-        <TagElement></TagElement>
-        <TagElement></TagElement>
-        <TagElement></TagElement>
+        {Data[0].tags.map(tag => (
+          <TagElement>{tag}</TagElement>
+        ))}
       </ListTags>
-      <Stars></Stars>
+    </Div>
+    <DivDos>
+      <Stars>{Data[0].rating}</Stars>
       <LandlordInfos>
         <LandlordName>{Data[0].host.name}</LandlordName>
         <LandlordPicture src={Data[0].host.picture}/>
       </LandlordInfos>
-    // Collapse elements
+    </DivDos>
+    <DivTres>
+    <p>desc</p>
+    <p>equip</p>
+    </DivTres>
     </LodgementInfos>
   )
 } 
