@@ -5,13 +5,14 @@ import { LodgementInfos , Title, Location, ListTags, TagElement, Stars, Landlord
 export default function LodgementDescription(){
   const { id } = useParams()
   const Data = JsonData.filter(prop => prop.id === id)
-  console.log(Data.title)
-
+  console.log(Data[0])
+  console.log(Data[0].host.picture)
+  
 
   return(
     <LodgementInfos>
-      <Title> Hello </Title>
-      <Location></Location>
+      <Title> {Data[0].title} </Title>
+      <Location> {Data[0].location}</Location>
       <ListTags>
         <TagElement></TagElement>
         <TagElement></TagElement>
@@ -19,8 +20,8 @@ export default function LodgementDescription(){
       </ListTags>
       <Stars></Stars>
       <LandlordInfos>
-        <LandlordName></LandlordName>
-        <LandlordPicture></LandlordPicture>
+        <LandlordName>{Data[0].host.name}</LandlordName>
+        <LandlordPicture src={Data[0].host.picture}/>
       </LandlordInfos>
     // Collapse elements
     </LodgementInfos>

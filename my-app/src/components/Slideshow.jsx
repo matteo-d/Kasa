@@ -14,28 +14,23 @@ function getLodgementImages(data) {
 }
 
 function Previous(img, idx, setIdx) {
-  console.log("Entry previous : ", idx)
   let len = img.length
   if (idx === 0) {
       setIdx( idx = len - 1)
-      console.log("Exit previous : ", idx)
       return 
   }
   setIdx(idx - 1)
-  console.log("Exit previous : ", idx)
 }
 
 function Next(img, idx, setIdx) {
-  console.log("Entry previous : ", idx)
   let len = img.length
   if (idx === len - 1) {
       setIdx( idx = 0)
-      console.log("Exit previous : ", idx)
       return 
   }
   setIdx(idx + 1)
-  console.log("Exit previous : ", idx)
 }
+
 export default function Slideshow() {
   const { id } = useParams()
   const Data = jsonData.filter(prop => prop.id === id)
