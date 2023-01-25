@@ -1,0 +1,26 @@
+[
+	{
+		"title": "Fiabilité",
+		"text": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
+		"id" : "1"
+
+	},
+	{
+		"title": "Respect",
+		"text": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
+
+		"id" : "2"
+	},	
+	{
+		"title": "Service",
+		"text": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
+
+		"id" : "3"
+	},	
+	{
+		"title": "Responsabilité",
+		"text": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
+
+		"id" : "4"
+	}
+]
