@@ -30,7 +30,7 @@ export default function LodgementDescription(){
   
   const [ expanded, setExpanded] = useState({})
   function toggleArrow(id) {
-  setExpanded({...expanded, [id]: !expanded[id]})
+  setExpanded({...expanded, [id]: !expanded[id]]})
   }
   return(
     <LodgementInfos>
@@ -68,7 +68,7 @@ export default function LodgementDescription(){
           </Article>
         );
       })}
-    </Section>
+    </Section
         <p>equip</p>
       </DivTres>
     </LodgementInfos>
