@@ -3,7 +3,7 @@ import styled from "styled-components"
 const Section = styled.section `
   background-image : url(${props => props.bgImage});
   display : flex;
-  width : 85%;
+  width : 86%;
   height : 25rem;
   justify-content : space-between;
   margin : auto;

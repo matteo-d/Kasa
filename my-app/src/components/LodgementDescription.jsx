@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom"
 import { Div, DivDos, DivTres, LodgementInfos , Title, Location, ListTags, TagElement, Infos, Stars, WrapperStars, LandlordName, LandlordPicture } from "../styles/LodgementDescription"
 
+import JsonData from "../data.json"
 import FilledStar from "../assets/FilledStar.svg"
 import EmptyStar from "../assets/EmptyStar.svg"
-import JsonData from "../data.json"
+import ArrowDown from "../assets/ArrowDown.svg"
+import ArrowUp from "../assets/ArrowUp.svg"
+import { CollapseDescription } from "./CollapseDescription.jsx"
 
 function displayStars (numberOfStars){
   let Array = []
@@ -19,10 +22,16 @@ function displayStars (numberOfStars){
   }
   return Array
 }
+
 export default function LodgementDescription(){
   const { id } = useParams()
   const Data = JsonData.filter(prop => prop.id === id)
   const stars = displayStars(Data[0].rating)
+  
+  const [ expanded, setExpanded] = useState({})
+  function toggleArrow(id) {
+  setExpanded({...expanded, [id]: !expanded[id]})
+  }
   return(
     <LodgementInfos>
       <Div>
@@ -46,7 +55,20 @@ export default function LodgementDescription(){
           </WrapperStars>
       </DivDos>
       <DivTres>
-        <p>desc</p>
+        <Section>
+      {Data.map(article => {
+        const isExpanded = expanded[article.id];
+        return (
+          <Article key={article.id}>
+            <Div>
+              <Title>Description</Title>
+              <Arrow bgImage={isExpanded ? ArrowUp : ArrowDown} onClick={() => toggleArrow(article.id)}> </Arrow>
+            </Div>
+            <Text display={isExpanded ? "block" : "none"}>{article.description}</Text>
+          </Article>
+        );
+      })}
+    </Section>
         <p>equip</p>
       </DivTres>
     </LodgementInfos>
